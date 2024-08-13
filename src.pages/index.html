@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<include- src="_layout.html">
+	<inlet- name="main">		
+		<style>
+			html {
+				background: black;
+				color: white;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				font-style: italic;
+				font-size: calc(100vw / 12);
+				line-height: 1.2;
+				font-weight: 400;
+			}
+			h1 {
+				font-size: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+			}
+			a {
+				cursor: crosshair;
+				color: hsl(0deg 80% 40%);
+				text-decoration: underline;
+				/* aligns with georgia bottom of foot of p */
+				text-underline-offset: 0.188em;
+    			text-decoration-thickness: 0.033em;
+				
+			}
+			main {
+				max-width: calc(100vw* 8 / 9);
+				margin: calc(100vh / 9) auto;		
+			}
+			article {				
+    			text-align: left;						
+				& p {
+					margin: 1rem 0;
+				}
+			}
+			pop-up  {
+				font-size: 30px;
+			}
+			input[type=tel] {
+				font-size: inherit;
+				padding-top: 1em;
+				padding-bottom: 1em;
+			}
+		</style>		
+		<article>
+			<h1 style="margin: calc(100vh / 4) 0;">
+				Ncarnate
+				<br/>
+				AI Agents
+			</h1>
+			<p>
+				What if your business could connect with people as naturally as they connect with each other? 
+			</p>
+			<p>
+				AI that lets people engage with your brand effortlessly—anytime, anywhere, on any platform.
+			</p>
+			<p>
+				Every interaction—whether it’s text, voice, video, or social media—is fluid, intuitive, and deeply personal.
+			</p>
+			<p>
+				And, it integrates seamlessly with your data, e-commerce, and social channels, creating a unified experience that’s unmistakably yours.
+			</p>		
+			<p>
+				<a onclick="window.popup.show('start-popup');">Let's do it</a>
+			</p>	
+		</article>
+		<footer>
+
+		</footer>
+	</inlet->
+</include->

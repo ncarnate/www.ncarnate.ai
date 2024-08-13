@@ -1,0 +1,58 @@
+#!/bin/zsh
+
+# prog="gitea"
+# prog_dir="$PWD/build"
+# prog_path="${prog_dir}/${prog}"
+# PID=`ps -ef | grep '[g]itea' | awk 'BEGIN {pid=0} NR == 1 {pid=$2} END {print pid}'`
+
+# PATH="${PATH}:$(pwd)/node_modules/.bin"
+
+alias www="../www/www"
+
+# OUT="$(pwd)/docs"
+# FILES=($(find ./site -type f))
+
+# find src -type f
+
+
+cmds="help"
+help ()
+{
+    echo $"Usage: $0 {${cmds}}"
+	RETVAL=2
+}
+
+cmds+="|start"
+start ()
+{
+    www start
+}
+
+cmds+="|clean"
+clean ()
+{
+    www clean
+}
+
+cmds+="|build"
+build ()
+{
+    www build
+}
+
+cmds+="|dist"
+dist ()
+{
+    www dist
+}
+
+
+type $1 > /dev/null && $@
+
+# eval "
+# case \"\$1\" in
+#     ${cmds}) \$1 ;;
+# 	*) help ;;
+# esac
+# "
+# exit $RETVAL

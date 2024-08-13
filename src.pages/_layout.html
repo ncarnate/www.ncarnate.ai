@@ -1,0 +1,40 @@
+
+<html lang="en" class="no-js loading" id="html">
+
+<include- src="_head.html"></include->
+
+<body class="">
+	<!-- <script type="module">
+		// import "./el/iolet/index.js";
+	</script> -->
+
+	<script async="false" type="module" src="/js/index.js"></script>
+	
+	<!-- <script type="module" src="el/filter-gooey/index.js"></script>
+	<filter-gooey></filter-gooey> -->
+
+	<main>						
+        <OUTLET- name="main"></OUTLET->
+	</main>
+
+	<link rel="stylesheet" type="text/css" href="/el/pop-up/style.css" />
+	<script type="module" src="/el/pop-up/index.js"></script>
+	<pop-up id="popup" data-lenis-prevent></pop-up>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/css/intlTelInput.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/el/input-tel/style.css" /> -->
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/intlTelInput.min.js"></script>
+	<script type="module" src="/el/input-tel/index.js"></script>
+	
+	<template id="start-popup">		
+		<div class="c_dark c_bg">
+			<h2>
+				Coming soon...
+			</h2>								
+			
+			
+			<input-tel></input-tel>
+		</div>
+	</template>
+</body>
+</html>

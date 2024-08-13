@@ -1,0 +1,1 @@
+const TAG="script-scoped";class ScriptScoped extends HTMLElement{connectedCallback(){new Function(this.textContent).call(this.parentElement)}}customElements.define(TAG,ScriptScoped)

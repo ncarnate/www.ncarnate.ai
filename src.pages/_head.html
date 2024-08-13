@@ -1,0 +1,58 @@
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Meyvn AI Executive Coach</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
+	<link rel="manifest" href="/app.webmanifest">    
+    <meta name="description" content="Meyvn AI Executive Coach" />
+    <meta name="keywords" content="coaching, consulting" />
+    <meta name="author" content="Meyvn" />
+    <link rel="shortcut icon" href="/icon/favicon.png">
+    
+    <link rel="stylesheet" type="text/css" href="/css/base.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/fonts/canela_deck/font-face.css" />
+    <link rel="stylesheet" type="text/css" href="/fonts/canela_text/font-face.css" /> -->
+
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/zda3gdw.css"> -->
+    <!-- <link rel="stylesheet" type="text/css"  href="https://use.typekit.net/apu8vrm.css" />  -->
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+    <script>
+        
+        document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js") ;
+
+        var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+
+        window.app_is_ready = false;
+
+        let _when_ready_resolve;
+        window.app_when_ready = new Promise(function (res) {
+            _when_ready_resolve = res;
+        })
+
+        const state = {}
+
+        requestAnimationFrame(function() {    
+            // Preload images and fonts ?
+            // preloadFonts('cvn8slu').then(() => {
+            requestAnimationFrame(load);    
+        })
+
+        function load() 
+        {
+            _when_ready_resolve(true);
+            window.app_is_ready = true;
+            document.documentElement.classList.remove('loading');
+            const event = new CustomEvent('appready', {
+                detail: state, // TODO:
+                bubbles: false,
+                cancelable: true,
+                composed: true
+            }); 
+            window.dispatchEvent(event);
+};
+
+    </script>
+
+</head>
